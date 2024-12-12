@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  margin: 20px auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgb(204, 10, 204);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 5px;
+  color: rgb(94, 35, 35);
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(252, 220, 161);
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="radio"] {
+  display: inline;
+  margin-right: 10px;
+}
+
+select {
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+  border: none;
   color: white;
+  cursor: pointer;
+  background-color: blue;
+  width: 48%;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: slateblue;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button[type="button"] {
+  background-color: gray;
+}
+
+button[type="button"]:hover {
+  background-color: darkgray;
+}
+
+button + button {
+  margin-left: 4%;
 }
